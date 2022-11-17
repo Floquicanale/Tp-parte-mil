@@ -13,11 +13,21 @@ public class Showingtext : MonoBehaviour
     [SerializeField]
     private float KillTime;
 
+    public float DistanceToView = 2f;
+    public Transform PlayerObject;
+
     // Start is called before the first frame update
     void Start()
     {
         GameObject newText = Instantiate(TextPrefab, ControlObject.transform.position, Quaternion.Euler(0, 90, 0));
-        newText.SetActive(true);
+        
+        if (Vector3.Distance(PlayerObject.position, ControlObject.transform.position) <= DistanceToView){
+            newText.SetActive(true);
+        }else
+        {
+            newText.SetActive(false);
+        }
+        
         Destroy(newText.gameObject, KillTime);
         //newText.GetComponent<SetText>().SetTextFunction("Presione la tecla E");
     }
@@ -25,7 +35,7 @@ public class Showingtext : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)){
+        if ((Vector3.Distance(PlayerObject.position, ControlObject.transform.position) <= DistanceToView)){
             GameObject newText = Instantiate(TextPrefab, ControlObject.transform.position, Quaternion.Euler(0, 90, 0));
             newText.SetActive(true);
             Destroy(newText.gameObject, KillTime);
