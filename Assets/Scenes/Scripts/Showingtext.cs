@@ -10,8 +10,8 @@ public class Showingtext : MonoBehaviour
     [SerializeField]
     private GameObject TextObject;
 
-    //[SerializeField]
-    //private GameObject TextPrefab;
+    [SerializeField]
+    private GameObject TextPrefab;
 
     //[SerializeField]
     //private float KillTime;
@@ -24,12 +24,12 @@ public class Showingtext : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //GameObject newText = Instantiate(TextPrefab, ControlObject.transform.position, Quaternion.Euler(0, 90, 0));
+        newText = Instantiate(TextPrefab, ControlObject.transform.position, Quaternion.Euler(0, 90, 0));
 
         if (Vector3.Distance(PlayerObject.position, ControlObject.transform.position) <= DistanceToView){
-            TextObject.SetActive(true);
+            newText.SetActive(true);
         }else{        
-            TextObject.SetActive(false);
+            newText.SetActive(false);
         }
         
         //Destroy(newText.gameObject, KillTime);
@@ -42,11 +42,11 @@ public class Showingtext : MonoBehaviour
         //GameObject newText = Instantiate(TextPrefab, ControlObject.transform.position, Quaternion.Euler(0, 90, 0));
         if ((Vector3.Distance(PlayerObject.position, ControlObject.transform.position) <= DistanceToView)){
             //GameObject newText = Instantiate(TextPrefab, ControlObject.transform.position, Quaternion.Euler(0, 90, 0));
-            TextObject.SetActive(true);
+            newText.SetActive(true);
             //Destroy(newText.gameObject, KillTime);
             //newText.GetComponent<SetText>().SetTextFunction("Presione la tecla E");
         }else{        
-            TextObject.SetActive(false);
+            newText.SetActive(false);
         }
         //Destroy(newText.gameObject, 1);
     }
