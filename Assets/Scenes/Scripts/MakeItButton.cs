@@ -8,12 +8,10 @@ public class MakeItButton : MonoBehaviour
     UnityEvent event0;
     public GameObject button;
     public GameObject Camara1;
-    public GameObject Camara2;
     // Start is called before the first frame update
     void Start(){
         button = this.gameObject;
         event0 = new UnityEvent();
-        Camara2.GetComponent<AudioListener> ().enabled  =  false;
         event0.AddListener(Silla);
     }
         
@@ -31,10 +29,7 @@ public class MakeItButton : MonoBehaviour
     }
     void Silla()
     {
-        Camara2.SetActive(true);
-        Camara1.SetActive(false);
-        Camara2.tag = "MainCamera";
-        Camara1.GetComponent<AudioListener> ().enabled  =  false;
-        Camara2.GetComponent<AudioListener> ().enabled  =  true;
+        Vector3 positions =  new Vector3(1.6f, 1.4f, 2.165f);
+        Camara1.transform.position = positions;
     }
 }
