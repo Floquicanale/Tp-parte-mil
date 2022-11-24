@@ -8,9 +8,6 @@ public class Showingtext : MonoBehaviour
     private GameObject ControlObject;
 
     [SerializeField]
-    private GameObject TextObject;
-
-    [SerializeField]
     private GameObject TextPrefab;
 
     //[SerializeField]
