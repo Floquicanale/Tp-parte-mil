@@ -8,6 +8,7 @@ public class MakeItButton : MonoBehaviour
     UnityEvent event0;
     public GameObject button;
     public GameObject Camara1;
+    public GameObject cilindro;
     // Start is called before the first frame update
     void Start(){
         button = this.gameObject;
@@ -30,6 +31,8 @@ public class MakeItButton : MonoBehaviour
     void Silla()
     {
         Vector3 positions =  new Vector3(1.6f, 1.4f, 2.165f);
+        cilindro.transform.position = positions;
         Camara1.transform.position = positions;
+        cilindro.SetActive(false);
     }
 }
