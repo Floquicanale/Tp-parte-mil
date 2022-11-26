@@ -11,7 +11,7 @@ public class ChairShowingText : MonoBehaviour
     private GameObject TextPrefab;
 
     public float DistanceToView = 2f;
-    public Transform PlayerObject;
+    public GameObject cilindro;
 
     GameObject newText;
 
@@ -21,7 +21,7 @@ public class ChairShowingText : MonoBehaviour
         Vector3 pos = new Vector3(ChairObject.transform.position.x, 1.4f, ChairObject.transform.position.z);   
         newText = Instantiate(TextPrefab, pos, Quaternion.Euler(0, 90, 0));
 
-        if (Vector3.Distance(PlayerObject.position, ChairObject.transform.position) <= DistanceToView){
+        if (Vector3.Distance(cilindro.transform.position, ChairObject.transform.position) <= DistanceToView){
             newText.SetActive(true);
         }else{        
             newText.SetActive(false);
@@ -33,7 +33,7 @@ public class ChairShowingText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((Vector3.Distance(PlayerObject.position, ChairObject.transform.position) <= DistanceToView)){
+        if (Vector3.Distance(cilindro.transform.position, ChairObject.transform.position) <= DistanceToView){
             newText.SetActive(true);
         }else{        
             newText.SetActive(false);
