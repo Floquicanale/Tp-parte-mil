@@ -138,9 +138,16 @@ PlayerSettings:
   preloadedAssets:
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 11400000, guid: b61d7e5cc37017644b7ec472e62d0ff8, type: 2}
-  - {fileID: 143963595752009651, guid: e4e4568851dd2194eb41961c69a42b04, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 11400000, guid: 441a9c51317b51f4783561bf791da3f7, type: 2}
+  - {fileID: 143963595752009651, guid: e4e4568851dd2194eb41961c69a42b04, type: 2}
+  - {fileID: 11400000, guid: b61d7e5cc37017644b7ec472e62d0ff8, type: 2}
+  - {fileID: -7388312765458145968, guid: 06c26b3e03c36e64fad20711e6e1f11a, type: 2}
+  - {fileID: 0}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -153,7 +160,7 @@ PlayerSettings:
   enableOpenGLProfilerGPURecorders: 1
   useHDRDisplay: 0
   D3DHDRBitDepth: 0
-  m_ColorGamuts: 00000000
+  m_ColorGamuts: 0000000003000000
   targetPixelDensity: 30
   resolutionScalingMode: 0
   resetResolutionOnWindowResize: 0
