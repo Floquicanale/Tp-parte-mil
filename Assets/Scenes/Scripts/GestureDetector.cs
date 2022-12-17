@@ -16,6 +16,7 @@ public class GestureDetector : MonoBehaviour
 
     public OVRSkeleton skeleton;
     public List<Gesture> gestures;
+    public bool debugMode = true;
     private List<OVRBone> fingerBones;
     
     void Start()
@@ -26,6 +27,20 @@ public class GestureDetector : MonoBehaviour
 
     void Update()
     {
-        
+        if(debugMode && Input.GetKeyDown(KeyCode.Space))
+        {
+            Save();
+        }
+    }
+    void Save(){
+        Gesture g = new Gesture();
+        g.name = "New Gesture";
+        List<Vector3> data = new List<Vector3>();
+        foreach (var bone in fingerBones)
+        {
+            data.Add(skeleton.transform.InverseTransformPoint(bone.Transform.position));
+        }
+        g.fingerDatas = data;
+        gestures.Add(g);
     }
 }

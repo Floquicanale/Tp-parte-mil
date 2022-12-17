@@ -3719,7 +3719,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10f90280696d738458950e55719c5092, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeleton: {fileID: 0}
+  skeleton: {fileID: 1631066554}
   gestures:
   - name: 
     fingerDatas: []
@@ -3746,6 +3746,7 @@ MonoBehaviour:
     onRecognized:
       m_PersistentCalls:
         m_Calls: []
+  debugMode: 1
 --- !u!4 &1326921209
 Transform:
   m_ObjectHideFlags: 0
@@ -4283,6 +4284,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1870938896605422, guid: 835e735ca71bf78459fb2cababd74112, type: 3}
   m_PrefabInstance: {fileID: 1631066552}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1631066554 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114567484643301796, guid: 835e735ca71bf78459fb2cababd74112, type: 3}
+  m_PrefabInstance: {fileID: 1631066552}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1631066553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2609c54f376cffc4da1ab9401cc1a36f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1631178741
 GameObject:
   m_ObjectHideFlags: 0
