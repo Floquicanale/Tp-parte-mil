@@ -16,6 +16,9 @@ public class PhysicsPointer : MonoBehaviour
 
     public GameObject player;
     public GameObject controller;
+    public GameObject handR;
+    public GameObject handL;
+    
 
     private void Awake()
     {
@@ -76,7 +79,11 @@ public class PhysicsPointer : MonoBehaviour
 
             player.transform.position = new Vector3 (1.278f,0.0f,1.992f);
 
+            handL.GetComponent<SkinnedMeshRenderer>().enabled=true;
+            handR.GetComponent<SkinnedMeshRenderer>().enabled=true;
             controller.SetActive(false);
+
+
         }
         
     }
