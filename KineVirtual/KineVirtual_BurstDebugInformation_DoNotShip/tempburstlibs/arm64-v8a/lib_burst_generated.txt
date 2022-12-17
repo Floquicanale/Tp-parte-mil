@@ -222,7 +222,6 @@ Library: lib_burst_generated
 --root-assembly=C:\Users\54117\Desktop\VR TP Final\Tp-parte-mil\Temp\StagingArea\Data\Managed\Unity.Services.Core.Registration.dll
 --root-assembly=C:\Users\54117\Desktop\VR TP Final\Tp-parte-mil\Temp\StagingArea\Data\Managed\Unity.XR.OpenXR.Features.MockRuntime.dll
 --root-assembly=C:\Users\54117\Desktop\VR TP Final\Tp-parte-mil\Temp\StagingArea\Data\Managed\Unity.Subsystem.Registration.dll
---root-assembly=C:\Users\54117\Desktop\VR TP Final\Tp-parte-mil\Temp\StagingArea\Data\Managed\Unity.XR.MockHMD.dll
 --root-assembly=C:\Users\54117\Desktop\VR TP Final\Tp-parte-mil\Temp\StagingArea\Data\Managed\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll
 --root-assembly=C:\Users\54117\Desktop\VR TP Final\Tp-parte-mil\Temp\StagingArea\Data\Managed\Unity.XR.Interaction.Toolkit.Samples.StarterAssets.dll
 --root-assembly=C:\Users\54117\Desktop\VR TP Final\Tp-parte-mil\Temp\StagingArea\Data\Managed\Unity.RenderPipelines.Core.ShaderLibrary.dll
