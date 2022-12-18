@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class Footsteps : MonoBehaviour
+public class footsteps : MonoBehaviour
 {
        CharacterController cc;
 

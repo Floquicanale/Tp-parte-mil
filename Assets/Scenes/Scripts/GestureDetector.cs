@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using System;
 
 [System.Serializable]
 public struct Gesture
@@ -16,19 +17,22 @@ public class GestureDetector : MonoBehaviour
 
     public OVRSkeleton skeleton;
     public List<Gesture> gestures;
-    public bool debugMode = true;
     private List<OVRBone> fingerBones;
-    
-    void Start()
+
+    IEnumerator Start()
     {
+
+        while (skeleton.Bones.Count == 0) {
+            yield return null;
+        }
+
         fingerBones = new List<OVRBone>(skeleton.Bones);
     }
-
-
     void Update()
     {
-        if(debugMode && Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Space))
         {
+            Debug.Log("Clicked");
             Save();
         }
     }
