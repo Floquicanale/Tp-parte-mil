@@ -15,9 +15,11 @@ public struct Gesture
 public class GestureDetector : MonoBehaviour
 {
 
+    public float threshold = 0.1f;
     public OVRSkeleton skeleton;
     public List<Gesture> gestures;
     private List<OVRBone> fingerBones;
+    private Gesture previousGesture;
 
     IEnumerator Start()
     {
@@ -27,6 +29,8 @@ public class GestureDetector : MonoBehaviour
         }
 
         fingerBones = new List<OVRBone>(skeleton.Bones);
+        previousGesture = new Gesture();
+
     }
     void Update()
     {
@@ -34,6 +38,15 @@ public class GestureDetector : MonoBehaviour
         {
             Debug.Log("Clicked");
             Save();
+        }
+
+        Gesture currentGesture = Recognize();
+        bool hasRecognized = !currentGesture.Equals(new Gesture());
+
+        if (hasRecognized && !currentGesture.Equals(previousGesture))
+        {
+            Debug.Log("New Gesture Found:" + currentGesture.name);
+            currentGesture.onRecognized.Invoke();
         }
     }
     void Save(){
@@ -46,5 +59,36 @@ public class GestureDetector : MonoBehaviour
         }
         g.fingerDatas = data;
         gestures.Add(g);
+    }
+
+    Gesture Recognize()
+    {
+        Gesture currentgesture = new Gesture();
+        float currentMin = Mathf.Infinity;
+        foreach (var gesture in gestures)
+        {
+            float sumDistance = 0;
+            bool isDiscarded = false;
+            for (int i = 0; i < fingerBones.Count; i++)
+            {
+                Vector3 currentData = skeleton.transform.InverseTransformPoint(fingerBones[i].Transform.position);
+                float distance = Vector3.Distance(currentData, gesture.fingerDatas[i]);
+                if (distance>threshold)
+                {
+                    isDiscarded = true;
+                    break;
+                }
+                sumDistance += distance;
+            }
+
+            if(!isDiscarded && sumDistance < currentMin)
+            {
+                currentMin = sumDistance;
+                currentgesture = gesture;
+
+            }
+
+        }
+        return currentgesture;
     }
 }
