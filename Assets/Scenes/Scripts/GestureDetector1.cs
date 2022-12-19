@@ -2,7 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 using System;
+using UnityEngine.UI;
+using UnityEngine.Video;
 
 [System.Serializable]
 public struct Gesture
@@ -20,18 +23,17 @@ public class GestureDetector1 : MonoBehaviour
     public List<Gesture> gestures;
     private List<OVRBone> fingerBones;
     private Gesture previousGesture;
-    public Texture video0;
-    public Texture video1;
-    public Texture video2;
-    public Texture video3;
-    public Texture video4;
-    public Texture video5;
+    public VideoClip video0;
+    public VideoClip video1;
+    public VideoClip video2;
+    public VideoClip video3;
+    public VideoClip video4;
+    public VideoClip video5;
     public GameObject tele;
+    private VideoPlayer videosource;
 
     IEnumerator Start(){
-        private Texture textura;
-        private VideoClip videosource;
-        private bool loop;
+        
         
         while (skeleton.Bones.Count == 0) 
         {
@@ -39,18 +41,14 @@ public class GestureDetector1 : MonoBehaviour
         }
 
         tele.SetActive(true);
-        textura = tele.GetComponent.<RawImage>().texture;
-        videosource = tele.GetComponent.<VideoPlayer>().VideoClip;
-        loop = tele.GetComponent.<VideoPlayer>().Loop;
+        videosource = tele.GetComponent<VideoPlayer>();
 
-        textura = video0;
-        videosource = video0;
-        loop = 0;
+        videosource.clip = video0;
+        videosource.isLooping = false;
 
         fingerBones = new List<OVRBone>(skeleton.Bones);
         previousGesture = new Gesture();
     }
-}
 
     void Update()
     {
