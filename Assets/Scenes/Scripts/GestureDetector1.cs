@@ -12,7 +12,7 @@ public struct Gesture
     public UnityEvent onRecognized;
 }
 
-public class GestureDetector : MonoBehaviour
+public class GestureDetector1 : MonoBehaviour
 {
 
     public float threshold = 0.1f;
@@ -20,23 +20,42 @@ public class GestureDetector : MonoBehaviour
     public List<Gesture> gestures;
     private List<OVRBone> fingerBones;
     private Gesture previousGesture;
+    public Texture video0;
+    public Texture video1;
+    public Texture video2;
+    public Texture video3;
+    public Texture video4;
+    public Texture video5;
+    public GameObject tele;
 
-    IEnumerator Start()
-    {
-
-        while (skeleton.Bones.Count == 0) {
+    IEnumerator Start(){
+        private Texture textura;
+        private VideoClip videosource;
+        private bool loop;
+        
+        while (skeleton.Bones.Count == 0) 
+        {
             yield return null;
         }
 
+        tele.SetActive(true);
+        textura = tele.GetComponent.<RawImage>().texture;
+        videosource = tele.GetComponent.<VideoPlayer>().VideoClip;
+        loop = tele.GetComponent.<VideoPlayer>().Loop;
+
+        textura = video0;
+        videosource = video0;
+        loop = 0;
+
         fingerBones = new List<OVRBone>(skeleton.Bones);
         previousGesture = new Gesture();
-
     }
+}
+
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log("Clicked");
             Save();
         }
 
@@ -46,7 +65,7 @@ public class GestureDetector : MonoBehaviour
         if (hasRecognized && !currentGesture.Equals(previousGesture))
         {
             Debug.Log("New Gesture Found:" + currentGesture.name);
-            currentGesture.onRecognized.Invoke();
+            //currentGesture.onRecognized.Invoke();
         }
     }
     void Save(){
