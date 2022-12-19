@@ -31,6 +31,12 @@ public class GestureDetector1 : MonoBehaviour
     public VideoClip video5;
     public GameObject tele;
     private VideoPlayer videosource;
+    private AudioSource ting;
+    public GameObject manos;
+    public Material checkmat;
+    private Material normalmat;
+    private bool v0 = false;
+    private bool v1 = false;
 
     IEnumerator Start(){
         
@@ -39,15 +45,17 @@ public class GestureDetector1 : MonoBehaviour
         {
             yield return null;
         }
-
-        tele.SetActive(true);
+        
         videosource = tele.GetComponent<VideoPlayer>();
-
+        ting = tele.GetComponent<AudioSource>();
         videosource.clip = video0;
         videosource.isLooping = false;
+        tele.SetActive(true);
 
         fingerBones = new List<OVRBone>(skeleton.Bones);
         previousGesture = new Gesture();
+        normalmat = manos.GetComponent<SkinnedMeshRenderer>().material;
+        
     }
 
     void Update()
@@ -60,11 +68,31 @@ public class GestureDetector1 : MonoBehaviour
         Gesture currentGesture = Recognize();
         bool hasRecognized = !currentGesture.Equals(new Gesture());
 
+        if(!videosource.isPlaying && !v0){
+            videosource.clip = video1;
+            videosource.Play();
+            videosource.isLooping = true;
+            v0=true;
+        }
+
         if (hasRecognized && !currentGesture.Equals(previousGesture))
         {
-            Debug.Log("New Gesture Found:" + currentGesture.name);
-            //currentGesture.onRecognized.Invoke();
+            if(currentGesture.name == "thumb down" && v0 && !v1){
+                ting.Play();
+                videosource.clip = video2;
+                videosource.Play();
+                videosource.isLooping = true;
+                while(ting.isPlaying){
+                    manos.GetComponent<SkinnedMeshRenderer>().material = checkmat;
+                }
+                manos.GetComponent<SkinnedMeshRenderer>().material = normalmat;
+                v1 = true;
+            }
+
         }
+
+        
+        
     }
     void Save(){
         Gesture g = new Gesture();
