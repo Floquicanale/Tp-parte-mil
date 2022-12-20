@@ -51,7 +51,7 @@ public class HandDetection : MonoBehaviour
         {
             //Debug.Log("New Gesture Found:" + currentGesture.name);
             currentGesture.onRecognized.Invoke();
-        }  
+        }
     }
 
     void Save(){
@@ -78,7 +78,7 @@ public class HandDetection : MonoBehaviour
             {
                 Vector3 currentData = skeleton.transform.InverseTransformPoint(fingerBones[i].Transform.position);
                 float distance = Vector3.Distance(currentData, gesture.fingerDatas[i]);
-                if (distance>threshold)
+                if (distance > threshold)
                 {
                     isDiscarded = true;
                     break;
@@ -86,7 +86,7 @@ public class HandDetection : MonoBehaviour
                 sumDistance += distance;
             }
 
-            if(!isDiscarded && sumDistance < currentMin)
+            if (!isDiscarded && sumDistance < currentMin)
             {
                 currentMin = sumDistance;
                 currentgesture = gesture;

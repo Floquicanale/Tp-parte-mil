@@ -84,13 +84,15 @@ public class PhysicsPointer : MonoBehaviour
             player.GetComponent<CapsuleCollider>().enabled = false;
 
             player.transform.position = new Vector3 (1.278f,0.0f,1.992f);
-            alexa.GetComponent<AudioSource>().enabled = false; 
-            TV.GetComponent<AudioSource>().enabled = true; 
-            
-            while(TV.GetComponent<AudioSource>().isPlaying)
+            Debug.Log("Estoy antes de alexa");
+            if(alexa.GetComponent<AudioSource>() != null)
             {
-                a += 1;
+                Debug.Log("alexa tiene audio source");
             }
+            alexa.GetComponent<AudioSource>().Stop();
+            Debug.Log("Estoy despues de alexa");
+            TV.GetComponent<AudioSource>().enabled = true;
+            Debug.Log("Prendi la tele");
 
             gestures.SetActive(true);
 

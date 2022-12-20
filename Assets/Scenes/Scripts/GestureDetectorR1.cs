@@ -30,20 +30,20 @@ public class GestureDetectorR1 : MonoBehaviour
     private Material normalmat;
     private bool v0 = false;
     private bool v1 = false;
+    private bool v2 = false;
+
 
     IEnumerator Start(){
+
+        videosource = tele.GetComponent<VideoPlayer>();
+        ting = tele.GetComponent<AudioSource>();
         
         
+
         while (skeleton.Bones.Count == 0) 
         {
             yield return null;
         }
-        
-        videosource = tele.GetComponent<VideoPlayer>();
-        ting = tele.GetComponent<AudioSource>();
-        videosource.clip = video0;
-        videosource.isLooping = false;
-        tele.SetActive(true);
 
         fingerBones = new List<OVRBone>(skeleton.Bones);
         previousGesture = new Gesture();
@@ -61,31 +61,44 @@ public class GestureDetectorR1 : MonoBehaviour
         Gesture currentGesture = Recognize();
         bool hasRecognized = !currentGesture.Equals(new Gesture());
 
-        if(!videosource.isPlaying && !v0){
+        Debug.Log(videosource.isPlaying + "1");
+        Debug.Log(v0);
+        Debug.Log(v1);
+        if (!v0)
+        {
+            videosource.clip = video0;
+            videosource.isLooping = false;
+            videosource.Play();
+            Debug.Log(videosource.isPlaying + "2");
+            v0 = true;
+        }
+        else if (!videosource.isPlaying && v0 && !v1)
+        {
+            Debug.Log("Segundo video");
             videosource.clip = video1;
             videosource.Play();
             videosource.isLooping = true;
-            v0=true;
+            v1 = true;
         }
 
         if (hasRecognized && !currentGesture.Equals(previousGesture))
         {
-            if(currentGesture.name == "thumb down" && v0 && !v1){
+            if (currentGesture.name == "thumb down" && v1 && !v2)
+            {
                 ting.Play();
                 videosource.clip = video2;
                 videosource.Play();
                 videosource.isLooping = true;
-                while(ting.isPlaying){
+                while (ting.isPlaying)
+                {
                     manos.GetComponent<SkinnedMeshRenderer>().material = checkmat;
                 }
                 manos.GetComponent<SkinnedMeshRenderer>().material = normalmat;
-                v1 = true;
+                v2 = true;
             }
 
         }
 
-        
-        
     }
     void Save(){
         Gesture g = new Gesture();
