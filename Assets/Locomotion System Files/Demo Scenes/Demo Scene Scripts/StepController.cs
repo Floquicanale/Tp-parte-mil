@@ -23,7 +23,7 @@ public class StepController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		steps = new GameObject[stepAmount];
-		Random.seed = 123;
+		//Random.seed = 123;
 		Vector3 pos = character.transform.position;
 		for (int i=0; i<stepAmount; i++) {
 			steps[i] = Instantiate(box, new Vector3(pos.x,-0.5f,-stepAmount/2+i+pos.z), transform.rotation) as GameObject;

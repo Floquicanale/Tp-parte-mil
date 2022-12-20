@@ -3109,8 +3109,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Transform_set_localPosition_mDE1C997F7D79C0885210B7732B4BA50EE7D73134 (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___value0, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Camera::set_orthographicSize(System.Single)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Camera_set_orthographicSize_m76DD021032ACB3DDBD052B75EC66DCE3A7295A5C (Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* __this, float ___value0, const RuntimeMethod* method) ;
-// System.Void UnityEngine.Random::set_seed(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Random_set_seed_mC65B0F2B6BFBADC9B0BEACB2415DA36CB01EF12B (int32_t ___value0, const RuntimeMethod* method) ;
 // T UnityEngine.Object::Instantiate<UnityEngine.GameObject>(T,UnityEngine.Vector3,UnityEngine.Quaternion)
 inline GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m831D2F71DF2AA6C93AFDFEFA04CF2CFC5FBBCDB4 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___original0, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___position1, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___rotation2, const RuntimeMethod* method)
 {
@@ -7955,8 +7953,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StepController_Start_mD0D48C76FFEE935A77
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_1 = (GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF*)(GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF*)SZArrayNew(GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF_il2cpp_TypeInfo_var, (uint32_t)L_0);
 		__this->___steps_15 = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___steps_15), (void*)L_1);
-		// Random.seed = 123;
-		Random_set_seed_mC65B0F2B6BFBADC9B0BEACB2415DA36CB01EF12B(((int32_t)123), NULL);
 		// Vector3 pos = character.transform.position;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2 = __this->___character_4;
 		NullCheck(L_2);
@@ -7968,10 +7964,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StepController_Start_mD0D48C76FFEE935A77
 		V_0 = L_4;
 		// for (int i=0; i<stepAmount; i++) {
 		V_1 = 0;
-		goto IL_00f2;
+		goto IL_00eb;
 	}
 
-IL_0030:
+IL_0029:
 	{
 		// steps[i] = Instantiate(box, new Vector3(pos.x,-0.5f,-stepAmount/2+i+pos.z), transform.rotation) as GameObject;
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_5 = __this->___steps_15;
@@ -8063,14 +8059,14 @@ IL_0030:
 		V_1 = ((int32_t)il2cpp_codegen_add(L_47, 1));
 	}
 
-IL_00f2:
+IL_00eb:
 	{
 		// for (int i=0; i<stepAmount; i++) {
 		int32_t L_48 = V_1;
 		int32_t L_49 = __this->___stepAmount_6;
 		if ((((int32_t)L_48) < ((int32_t)L_49)))
 		{
-			goto IL_0030;
+			goto IL_0029;
 		}
 	}
 	{

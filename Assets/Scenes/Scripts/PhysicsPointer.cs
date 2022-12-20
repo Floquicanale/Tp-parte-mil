@@ -20,6 +20,10 @@ public class PhysicsPointer : MonoBehaviour
     public GameObject handL;
 
     public GameObject TV;
+    public GameObject gestures;
+    public GameObject alexa;
+
+    private int a = 1;
     
 
     private void Awake()
@@ -80,16 +84,22 @@ public class PhysicsPointer : MonoBehaviour
             player.GetComponent<CapsuleCollider>().enabled = false;
 
             player.transform.position = new Vector3 (1.278f,0.0f,1.992f);
+            alexa.GetComponent<AudioSource>().enabled = false; 
+            TV.GetComponent<AudioSource>().enabled = true; 
+            
+            while(TV.GetComponent<AudioSource>().isPlaying)
+            {
+                a += 1;
+            }
+
+            gestures.SetActive(true);
 
             handL.GetComponent<SkinnedMeshRenderer>().enabled=true;
             handR.GetComponent<SkinnedMeshRenderer>().enabled=true;
             controller.SetActive(false);
 
-            TV.GetComponent<AudioSource>().enabled = true; 
-
-
+            
         }
-        
     }
 }   
 

@@ -155,6 +155,7 @@ Transform:
   - {fileID: 1281761193}
   - {fileID: 297526113}
   - {fileID: 1839989820}
+  - {fileID: 2068366361}
   - {fileID: 635159257}
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -377,7 +378,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: a180fc4b8fecd3e48957085deb7c9b37, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a180fc4b8fecd3e48957085deb7c9b37, type: 3}
       propertyPath: m_LocalScale.x
@@ -483,7 +484,6 @@ Transform:
   - {fileID: 331987040}
   - {fileID: 933650561}
   - {fileID: 993155866}
-  - {fileID: 2068366361}
   - {fileID: 1302908684}
   - {fileID: 1935335142}
   - {fileID: 165585584}
@@ -1306,7 +1306,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 039dbaef0ca3a2444bc0eb48f83b4f01, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 039dbaef0ca3a2444bc0eb48f83b4f01, type: 3}
       propertyPath: m_LocalScale.x
@@ -1605,7 +1605,7 @@ RectTransform:
   m_Children:
   - {fileID: 1951041275}
   m_Father: {fileID: 33104258}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2352,7 +2352,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: aa29d40f2c00be2469464ff05a2eb079, type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aa29d40f2c00be2469464ff05a2eb079, type: 3}
       propertyPath: m_LocalScale.x
@@ -3376,7 +3376,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 7296993938732e44eb31b4bdd679dd5d, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7296993938732e44eb31b4bdd679dd5d, type: 3}
       propertyPath: m_LocalScale.x
@@ -3702,8 +3702,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1326921209}
-  - component: {fileID: 1326921208}
+  - component: {fileID: 1326921214}
   - component: {fileID: 1326921211}
+  - component: {fileID: 1326921213}
+  - component: {fileID: 1326921212}
+  - component: {fileID: 1326921208}
   - component: {fileID: 1326921210}
   m_Layer: 0
   m_Name: Gesture Detection
@@ -3711,7 +3714,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1326921208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4884,7 +4887,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1326921207}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c49fcb330b0420545ba58071a1bb2d71, type: 3}
   m_Name: 
@@ -5106,6 +5109,379 @@ MonoBehaviour:
   tele: {fileID: 1951041274}
   manos: {fileID: 1631066553}
   checkmat: {fileID: 2100000, guid: 8e5b0bdf6f86ed04189fd7aa7d556bde, type: 2}
+--- !u!114 &1326921212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326921207}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b30243b2c8e6c94f9f50a4850efa850, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  threshold: 0.1
+  skeleton: {fileID: 0}
+  gestures:
+  - name: dedos cerrados
+    fingerDatas:
+    - {x: -0.00000004147809, y: -0.00000007097962, z: 0.00000010035206}
+    - {x: -0.00000004147809, y: -0.00000007097962, z: 0.00000010035206}
+    - {x: -0.020069055, y: -0.011554108, z: -0.010496904}
+    - {x: -0.03595845, y: -0.019157814, z: -0.028028427}
+    - {x: -0.06497096, y: -0.022496907, z: -0.042318817}
+    - {x: -0.09834237, y: -0.024544522, z: -0.047230378}
+    - {x: -0.09599631, y: -0.0073164916, z: -0.023550576}
+    - {x: -0.13151397, y: -0.013386411, z: -0.011713085}
+    - {x: -0.15405388, y: -0.017883675, z: -0.0038141194}
+    - {x: -0.09564668, y: -0.0025432338, z: -0.0017257911}
+    - {x: -0.13753541, y: -0.0054446235, z: 0.0071983384}
+    - {x: -0.16435747, y: -0.007468098, z: 0.013152976}
+    - {x: -0.088693835, y: -0.006529387, z: 0.017465264}
+    - {x: -0.1272017, y: -0.008230688, z: 0.023376646}
+    - {x: -0.15337923, y: -0.010436088, z: 0.027378649}
+    - {x: -0.03407363, y: -0.009419904, z: 0.022998633}
+    - {x: -0.077895895, y: -0.013691252, z: 0.035054076}
+    - {x: -0.1084445, y: -0.012768454, z: 0.038164373}
+    - {x: -0.12828775, y: -0.016367402, z: 0.040581714}
+    - {x: -0.121658474, y: -0.02775269, z: -0.054460615}
+    - {x: -0.1746548, y: -0.017774666, z: 0.004952245}
+    - {x: -0.18823823, y: -0.0035888965, z: 0.019421885}
+    - {x: -0.17755155, y: -0.009476273, z: 0.030410888}
+    - {x: -0.15019482, y: -0.01734245, z: 0.041702975}
+    onRecognized:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1631066555}
+          m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
+          m_MethodName: set_material
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 2100000, guid: 584662273d60a0f47bd7fecbb570e66e, type: 2}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - name: dedos abiertos
+    fingerDatas:
+    - {x: -0.00000004043153, y: -0.000000037183394, z: 0.000000043959254}
+    - {x: -0.00000004043153, y: -0.000000037183394, z: 0.000000043959254}
+    - {x: -0.020069065, y: -0.011554112, z: -0.0104969}
+    - {x: -0.035958532, y: -0.019157792, z: -0.028028391}
+    - {x: -0.05961218, y: -0.025637416, z: -0.049373418}
+    - {x: -0.084101185, y: -0.026310109, z: -0.07265011}
+    - {x: -0.09599632, y: -0.0073165228, z: -0.023550646}
+    - {x: -0.13172649, y: -0.0070505114, z: -0.03626917}
+    - {x: -0.15472914, y: -0.00756202, z: -0.04409767}
+    - {x: -0.09564667, y: -0.002543293, z: -0.0017257911}
+    - {x: -0.13773698, y: 0.005138099, z: 0.0017573254}
+    - {x: -0.16492103, y: 0.008883943, z: 0.0042017642}
+    - {x: -0.08869389, y: -0.006529364, z: 0.017465334}
+    - {x: -0.12502165, y: -0.0012807767, z: 0.030634923}
+    - {x: -0.1498638, y: 0.0014472064, z: 0.039666656}
+    - {x: -0.034073606, y: -0.009419938, z: 0.022998683}
+    - {x: -0.07789591, y: -0.013691279, z: 0.035054147}
+    - {x: -0.09862403, y: -0.013334526, z: 0.05772487}
+    - {x: -0.11107326, y: -0.013669487, z: 0.07377025}
+    - {x: -0.09642511, y: -0.026338175, z: -0.09396513}
+    - {x: -0.17615505, y: -0.0042046825, z: -0.04965807}
+    - {x: -0.18820132, y: 0.017446904, z: 0.007257332}
+    - {x: -0.17246741, y: 0.006722368, z: 0.047127314}
+    - {x: -0.12590106, y: -0.0113275405, z: 0.089794606}
+    onRecognized:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1631066555}
+          m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
+          m_MethodName: set_material
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 2100000, guid: 584662273d60a0f47bd7fecbb570e66e, type: 2}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &1326921213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326921207}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f3b3339affed704589adb92d66cee35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  threshold: 0.1
+  skeleton: {fileID: 0}
+  gestures:
+  - name: La garra
+    fingerDatas:
+    - {x: 0.000000048765365, y: -0.000000024739327, z: 0.00000018412184}
+    - {x: 0.000000048765365, y: -0.000000024739327, z: 0.00000018412184}
+    - {x: -0.020068977, y: -0.011554032, z: -0.010496847}
+    - {x: -0.035958394, y: -0.01915772, z: -0.02802834}
+    - {x: -0.057835776, y: -0.042741768, z: -0.03274637}
+    - {x: -0.08443794, y: -0.0635765, z: -0.03320754}
+    - {x: -0.09599614, y: -0.0073164757, z: -0.023550645}
+    - {x: -0.12829378, y: -0.027166648, z: -0.022403888}
+    - {x: -0.13115948, y: -0.05127934, z: -0.021387769}
+    - {x: -0.095646575, y: -0.0025431395, z: -0.0017257066}
+    - {x: -0.13226986, y: -0.024828784, z: 0.0004674793}
+    - {x: -0.12697671, y: -0.051837415, z: -0.00075443333}
+    - {x: -0.088693775, y: -0.0065293084, z: 0.017465359}
+    - {x: -0.12251945, y: -0.02570338, z: 0.020444207}
+    - {x: -0.11941428, y: -0.05162027, z: 0.015462605}
+    - {x: -0.03407352, y: -0.009419839, z: 0.02299861}
+    - {x: -0.07789581, y: -0.013691157, z: 0.035054218}
+    - {x: -0.103567444, y: -0.03048905, z: 0.03664871}
+    - {x: -0.10534885, y: -0.04997524, z: 0.031201972}
+    - {x: -0.100649856, y: -0.0812448, z: -0.038794193}
+    - {x: -0.1281135, y: -0.07336696, z: -0.019358074}
+    - {x: -0.11154043, y: -0.07128354, z: -0.003618055}
+    - {x: -0.10458738, y: -0.06947842, z: 0.008001614}
+    - {x: -0.09844952, y: -0.06769837, z: 0.020228473}
+    onRecognized:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1631066555}
+          m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
+          m_MethodName: set_material
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 2100000, guid: 584662273d60a0f47bd7fecbb570e66e, type: 2}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - name: la garra +1
+    fingerDatas:
+    - {x: -0.000000035134217, y: 0.00000013618161, z: 0.0000000043673984}
+    - {x: -0.000000035134217, y: 0.00000013618161, z: 0.0000000043673984}
+    - {x: -0.020069052, y: -0.011553924, z: -0.010496961}
+    - {x: -0.035958506, y: -0.019157605, z: -0.028028494}
+    - {x: -0.055256926, y: -0.031263735, z: -0.05122537}
+    - {x: -0.07971146, y: -0.041865986, z: -0.071999036}
+    - {x: -0.09599626, y: -0.0073162946, z: -0.023550678}
+    - {x: -0.1308291, y: -0.019928573, z: -0.015421223}
+    - {x: -0.1232971, y: -0.04301817, z: -0.016318051}
+    - {x: -0.09564663, y: -0.0025430059, z: -0.0017259032}
+    - {x: -0.13345246, y: -0.021732967, z: 0.004997012}
+    - {x: -0.12089399, y: -0.046049252, z: 0.0018372119}
+    - {x: -0.08869378, y: -0.006529167, z: 0.017465256}
+    - {x: -0.12423824, y: -0.02136279, z: 0.023568971}
+    - {x: -0.115174755, y: -0.045437384, z: 0.01690483}
+    - {x: -0.034073636, y: -0.009419711, z: 0.022998586}
+    - {x: -0.077895895, y: -0.013691074, z: 0.03505405}
+    - {x: -0.106217176, y: -0.024520695, z: 0.039990183}
+    - {x: -0.10365786, y: -0.04316991, z: 0.032360654}
+    - {x: -0.09071869, y: -0.047948383, z: -0.09316631}
+    - {x: -0.102999985, y: -0.05169823, z: -0.020052422}
+    - {x: -0.09730924, y: -0.049889486, z: -0.0054870443}
+    - {x: -0.09249862, y: -0.048439417, z: 0.008467104}
+    - {x: -0.086431965, y: -0.04923279, z: 0.020168947}
+    onRecognized:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1631066555}
+          m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
+          m_MethodName: set_material
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 2100000, guid: 584662273d60a0f47bd7fecbb570e66e, type: 2}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - name: la garra +2
+    fingerDatas:
+    - {x: -0.000000025399801, y: 0.00000008013256, z: 0.000000029209376}
+    - {x: -0.000000025399801, y: 0.00000008013256, z: 0.000000029209376}
+    - {x: -0.020069066, y: -0.0115538705, z: -0.01049701}
+    - {x: -0.035958428, y: -0.019157566, z: -0.028028471}
+    - {x: -0.056213617, y: -0.028970232, z: -0.05149175}
+    - {x: -0.07980666, y: -0.035317574, z: -0.074838124}
+    - {x: -0.095996246, y: -0.007316397, z: -0.023550646}
+    - {x: -0.1335696, y: -0.011720699, z: -0.026256895}
+    - {x: -0.1568565, y: -0.018552866, z: -0.02756323}
+    - {x: -0.09564658, y: -0.002543053, z: -0.0017258988}
+    - {x: -0.13275105, y: -0.023716796, z: 0.0024763318}
+    - {x: -0.11960869, y: -0.047801968, z: -0.0000068958925}
+    - {x: -0.08869386, y: -0.006529167, z: 0.017465224}
+    - {x: -0.12317711, y: -0.02345389, z: 0.024184607}
+    - {x: -0.11121592, y: -0.0459646, z: 0.016678456}
+    - {x: -0.034073588, y: -0.009419686, z: 0.022998573}
+    - {x: -0.077895895, y: -0.013691086, z: 0.03505406}
+    - {x: -0.105214074, y: -0.025176188, z: 0.043150466}
+    - {x: -0.1015096, y: -0.043237627, z: 0.03462918}
+    - {x: -0.08973666, y: -0.03809964, z: -0.09719576}
+    - {x: -0.178749, y: -0.023233142, z: -0.027290208}
+    - {x: -0.09567569, y: -0.052100576, z: -0.005783166}
+    - {x: -0.088466905, y: -0.045901302, z: 0.007909568}
+    - {x: -0.08460082, y: -0.046214648, z: 0.020941181}
+    onRecognized:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1631066555}
+          m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
+          m_MethodName: set_material
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 2100000, guid: 584662273d60a0f47bd7fecbb570e66e, type: 2}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - name: la garra +3
+    fingerDatas:
+    - {x: -0.000000031359978, y: 0.00000007873856, z: 0.000000027135897}
+    - {x: -0.000000031359978, y: 0.00000007873856, z: 0.000000027135897}
+    - {x: -0.020068979, y: -0.011553899, z: -0.010496971}
+    - {x: -0.035958406, y: -0.019157616, z: -0.028028458}
+    - {x: -0.057368625, y: -0.026659718, z: -0.051318143}
+    - {x: -0.082098335, y: -0.030727511, z: -0.07398677}
+    - {x: -0.09599631, y: -0.0073163575, z: -0.023550663}
+    - {x: -0.13351385, y: -0.012341865, z: -0.025928214}
+    - {x: -0.15741768, y: -0.016576933, z: -0.027085455}
+    - {x: -0.095646575, y: -0.0025430059, z: -0.0017259081}
+    - {x: -0.1364768, y: -0.015060303, z: 0.0026265352}
+    - {x: -0.16097616, y: -0.027369745, z: 0.0053164475}
+    - {x: -0.08869377, y: -0.0065291985, z: 0.01746526}
+    - {x: -0.11848987, y: -0.031319764, z: 0.021745076}
+    - {x: -0.100985624, y: -0.049609352, z: 0.01366801}
+    - {x: -0.034073614, y: -0.009419686, z: 0.022998564}
+    - {x: -0.07789583, y: -0.013691047, z: 0.035054065}
+    - {x: -0.10149136, y: -0.033069756, z: 0.038439095}
+    - {x: -0.09236003, y: -0.048316315, z: 0.028604852}
+    - {x: -0.091922276, y: -0.031335328, z: -0.09655517}
+    - {x: -0.17980126, y: -0.016441153, z: -0.0266229}
+    - {x: -0.18434647, y: -0.035598606, z: 0.008595551}
+    - {x: -0.07837621, y: -0.045067765, z: 0.0057561398}
+    - {x: -0.07433001, y: -0.04720573, z: 0.016122371}
+    onRecognized:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1631066555}
+          m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
+          m_MethodName: set_material
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 2100000, guid: 584662273d60a0f47bd7fecbb570e66e, type: 2}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - name: la garra +4
+    fingerDatas:
+    - {x: -0.000000051110447, y: 0.00000013106222, z: 0.0000000030546168}
+    - {x: -0.000000051110447, y: 0.00000013106222, z: 0.0000000030546168}
+    - {x: -0.020069081, y: -0.011553896, z: -0.010497006}
+    - {x: -0.03595852, y: -0.01915756, z: -0.028028494}
+    - {x: -0.05723401, y: -0.02503483, z: -0.051900942}
+    - {x: -0.08286569, y: -0.028690059, z: -0.07361795}
+    - {x: -0.09599625, y: -0.007316405, z: -0.023550646}
+    - {x: -0.13264479, y: -0.015282057, z: -0.029199643}
+    - {x: -0.15551154, y: -0.022883568, z: -0.032360848}
+    - {x: -0.09564658, y: -0.002542998, z: -0.0017258934}
+    - {x: -0.13712838, y: -0.013434212, z: -0.003563542}
+    - {x: -0.16350721, y: -0.021321096, z: -0.0045303283}
+    - {x: -0.08869378, y: -0.006529167, z: 0.017465254}
+    - {x: -0.12529325, y: -0.01941354, z: 0.021359842}
+    - {x: -0.14780678, y: -0.03344687, z: 0.022893218}
+    - {x: -0.034073573, y: -0.009419662, z: 0.022998573}
+    - {x: -0.077895924, y: -0.013691095, z: 0.035054076}
+    - {x: -0.09874176, y: -0.0362546, z: 0.034779463}
+    - {x: -0.08407087, y: -0.046201784, z: 0.024861326}
+    - {x: -0.09479207, y: -0.029514447, z: -0.095142126}
+    - {x: -0.17748845, y: -0.02688963, z: -0.033853944}
+    - {x: -0.1884529, y: -0.022849083, z: -0.0044463696}
+    - {x: -0.16874371, y: -0.04593491, z: 0.023215473}
+    - {x: -0.06630217, y: -0.036460713, z: 0.016404718}
+    onRecognized:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1631066555}
+          m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
+          m_MethodName: set_material
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 2100000, guid: 584662273d60a0f47bd7fecbb570e66e, type: 2}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &1326921214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326921207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9af5d1ff85a51f94291c0e3842ac4ecc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  threshold: 0.1
+  skeleton: {fileID: 1631066554}
+  gestures:
+  - name: dedos abiertos
+    fingerDatas:
+    - {x: -0.00000004043153, y: -0.000000037183394, z: 0.000000043959254}
+    - {x: -0.00000004043153, y: -0.000000037183394, z: 0.000000043959254}
+    - {x: -0.020069065, y: -0.011554112, z: -0.0104969}
+    - {x: -0.035958532, y: -0.019157792, z: -0.028028391}
+    - {x: -0.05961218, y: -0.025637416, z: -0.049373418}
+    - {x: -0.084101185, y: -0.026310109, z: -0.07265011}
+    - {x: -0.09599632, y: -0.0073165228, z: -0.023550646}
+    - {x: -0.13172649, y: -0.0070505114, z: -0.03626917}
+    - {x: -0.15472914, y: -0.00756202, z: -0.04409767}
+    - {x: -0.09564667, y: -0.002543293, z: -0.0017257911}
+    - {x: -0.13773698, y: 0.005138099, z: 0.0017573254}
+    - {x: -0.16492103, y: 0.008883943, z: 0.0042017642}
+    - {x: -0.08869389, y: -0.006529364, z: 0.017465334}
+    - {x: -0.12502165, y: -0.0012807767, z: 0.030634923}
+    - {x: -0.1498638, y: 0.0014472064, z: 0.039666656}
+    - {x: -0.034073606, y: -0.009419938, z: 0.022998683}
+    - {x: -0.07789591, y: -0.013691279, z: 0.035054147}
+    - {x: -0.09862403, y: -0.013334526, z: 0.05772487}
+    - {x: -0.11107326, y: -0.013669487, z: 0.07377025}
+    - {x: -0.09642511, y: -0.026338175, z: -0.09396513}
+    - {x: -0.17615505, y: -0.0042046825, z: -0.04965807}
+    - {x: -0.18820132, y: 0.017446904, z: 0.007257332}
+    - {x: -0.17246741, y: 0.006722368, z: 0.047127314}
+    - {x: -0.12590106, y: -0.0113275405, z: 0.089794606}
+    onRecognized:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1326921211}
+          m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+          m_MethodName: set_enabled
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
 --- !u!1001 &1367024085
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5319,39 +5695,51 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 179676765}
+    m_TransformParent: {fileID: 33104258}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: fb6a3d89e56059542a19f4bb5d2451fc, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fb6a3d89e56059542a19f4bb5d2451fc, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8000002
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fb6a3d89e56059542a19f4bb5d2451fc, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.8000003
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fb6a3d89e56059542a19f4bb5d2451fc, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.8000002
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fb6a3d89e56059542a19f4bb5d2451fc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.502
+      value: 3.429601
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fb6a3d89e56059542a19f4bb5d2451fc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.59
+      value: 1.2720007
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fb6a3d89e56059542a19f4bb5d2451fc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.287
+      value: 2.0015998
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fb6a3d89e56059542a19f4bb5d2451fc, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fb6a3d89e56059542a19f4bb5d2451fc, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.7071068
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fb6a3d89e56059542a19f4bb5d2451fc, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fb6a3d89e56059542a19f4bb5d2451fc, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.50000006
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fb6a3d89e56059542a19f4bb5d2451fc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6622,7 +7010,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1951041275
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6904,6 +7292,102 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.5000004, y: 0.13373469, z: 0.80474234}
   m_Center: {x: 0.0000009536743, y: 0.056868773, z: 0.46403113}
+--- !u!82 &2068366367
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1728787458}
+  m_Enabled: 0
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f52c0a282b6b10548a1e81ff5716b060, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &2097220825
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6987,7 +7471,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3761179972919226877, guid: d461ff580ee88a64180c38e9c24efca7, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4811231546847927066, guid: d461ff580ee88a64180c38e9c24efca7, type: 3}
       propertyPath: chair
@@ -7099,6 +7583,9 @@ MonoBehaviour:
   controller: {fileID: 6176195547781272407}
   handR: {fileID: 1631066553}
   handL: {fileID: 333948090}
+  TV: {fileID: 1728787458}
+  gestures: {fileID: 1326921207}
+  alexa: {fileID: 0}
 --- !u!1 &6176195547781272409 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6176123480778728835, guid: d461ff580ee88a64180c38e9c24efca7, type: 3}

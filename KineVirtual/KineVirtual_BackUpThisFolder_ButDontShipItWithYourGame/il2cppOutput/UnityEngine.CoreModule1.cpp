@@ -20307,15 +20307,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Random_get_value_m2CEA87FADF5222EF9E13D
 	float icallRetVal = _il2cpp_icall_func();
 	return icallRetVal;
 }
-// System.Void UnityEngine.Random::set_seed(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Random_set_seed_mC65B0F2B6BFBADC9B0BEACB2415DA36CB01EF12B (int32_t ___value0, const RuntimeMethod* method) 
-{
-	typedef void (*Random_set_seed_mC65B0F2B6BFBADC9B0BEACB2415DA36CB01EF12B_ftn) (int32_t);
-	static Random_set_seed_mC65B0F2B6BFBADC9B0BEACB2415DA36CB01EF12B_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (Random_set_seed_mC65B0F2B6BFBADC9B0BEACB2415DA36CB01EF12B_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Random::set_seed(System.Int32)");
-	_il2cpp_icall_func(___value0);
-}
 // System.Void UnityEngine.Random::get_state_Injected(UnityEngine.Random/State&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Random_get_state_Injected_m0EF69EA03F647728616193C49A51100FDEA56244 (State_tA37EB68FE687D41D4B228462D4C7427FAC5BF9C1* ___ret0, const RuntimeMethod* method) 
 {
