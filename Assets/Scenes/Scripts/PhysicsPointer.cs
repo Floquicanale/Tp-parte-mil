@@ -18,6 +18,8 @@ public class PhysicsPointer : MonoBehaviour
     public GameObject controller;
     public GameObject handR;
     public GameObject handL;
+
+    public GameObject TV;
     
 
     private void Awake()
@@ -82,6 +84,8 @@ public class PhysicsPointer : MonoBehaviour
             handL.GetComponent<SkinnedMeshRenderer>().enabled=true;
             handR.GetComponent<SkinnedMeshRenderer>().enabled=true;
             controller.SetActive(false);
+
+            TV.GetComponent<AudioSource>().enabled = true; 
 
 
         }
