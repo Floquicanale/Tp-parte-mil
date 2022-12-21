@@ -22,8 +22,6 @@ public class PhysicsPointer : MonoBehaviour
     public GameObject TV;
     public GameObject gestures;
     public GameObject alexa;
-
-    private int a = 1;
     
 
     private void Awake()
@@ -84,15 +82,9 @@ public class PhysicsPointer : MonoBehaviour
             player.GetComponent<CapsuleCollider>().enabled = false;
 
             player.transform.position = new Vector3 (1.278f,0.0f,1.992f);
-            Debug.Log("Estoy antes de alexa");
-            if(alexa.GetComponent<AudioSource>() != null)
-            {
-                Debug.Log("alexa tiene audio source");
-            }
+            
             alexa.GetComponent<AudioSource>().Stop();
-            Debug.Log("Estoy despues de alexa");
-            TV.GetComponent<AudioSource>().enabled = true;
-            Debug.Log("Prendi la tele");
+            TV.GetComponent<AudioSource>().Play();
 
             gestures.SetActive(true);
 

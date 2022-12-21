@@ -5,23 +5,36 @@ using UnityEngine;
 
 public class CheckedGesture : MonoBehaviour
 {
-    public GameObject TV;
+    public GameObject TVCanvas;
     private AudioSource checkSound;
     public GameObject hand;
     public Material checkMat;
     private Material origMat;
+    private float t0;
+    private float t1;   
 
-    void Start()
+    public void Start()
     {
         origMat = hand.GetComponent<SkinnedMeshRenderer>().material;
-        checkSound = TV.GetComponent<AudioSource>();
+        checkSound = TVCanvas.GetComponent<AudioSource>();
         checkSound.Play();
-        
-        while(checkSound.isPlaying)
+        t0 = Time.time;
+    }
+
+    public void Update()
+    {
+        t1 = Time.time;
+
+        if (t1-t0 < checkSound.clip.length)
         {
             hand.GetComponent<SkinnedMeshRenderer>().material = checkMat;
         }
+        else
+        {
+            hand.GetComponent<SkinnedMeshRenderer>().material = origMat;
+
+        }
         
-        hand.GetComponent<SkinnedMeshRenderer>().material = origMat;
+        
     }
 }

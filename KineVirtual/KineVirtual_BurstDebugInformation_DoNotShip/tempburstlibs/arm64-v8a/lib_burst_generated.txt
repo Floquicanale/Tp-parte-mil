@@ -116,6 +116,7 @@ Library: lib_burst_generated
 --compilation-defines=ENABLE_TIMELINE
 --compilation-defines=ENABLE_INPUT_SYSTEM
 --compilation-defines=ENABLE_LEGACY_INPUT_MANAGER
+--compilation-defines=UNITY_POST_PROCESSING_STACK_V2
 --compilation-defines=INPUT_SYSTEM_1_4_OR_NEWER
 --compilation-defines=INPUT_SYSTEM_1_1_OR_NEWER
 --compilation-defines=AR_FOUNDATION_4_1_OR_NEWER
@@ -166,6 +167,7 @@ Library: lib_burst_generated
 --compilation-defines=INCLUDE_LEGACY_INPUT_HELPERS
 --compilation-defines=UNITY_ANALYTICS
 --compilation-defines=TIMELINE_FRAMEACCURATE
+--compilation-defines=UNIVERSAL_1_0_0_OR_NEWER
 --generate-link-xml=Temp\burst.link.xml
 --output=C:\Users\54117\Desktop\VR TP Final\Tp-parte-mil\Temp\StagingArea\tempburstlibs\arm64-v8a\lib_burst_generated
 --root-assembly=C:\Users\54117\Desktop\VR TP Final\Tp-parte-mil\Temp\StagingArea\Data\Managed\Unity.XR.Interaction.Toolkit.dll
@@ -228,6 +230,7 @@ Library: lib_burst_generated
 --root-assembly=C:\Users\54117\Desktop\VR TP Final\Tp-parte-mil\Temp\StagingArea\Data\Managed\Unity.XR.OpenXR.Features.RuntimeDebugger.dll
 --root-assembly=C:\Users\54117\Desktop\VR TP Final\Tp-parte-mil\Temp\StagingArea\Data\Managed\Unity.RenderPipelines.Universal.Shaders.dll
 --root-assembly=C:\Users\54117\Desktop\VR TP Final\Tp-parte-mil\Temp\StagingArea\Data\Managed\Unity.XR.OpenXR.Features.OculusQuestSupport.dll
+--root-assembly=C:\Users\54117\Desktop\VR TP Final\Tp-parte-mil\Temp\StagingArea\Data\Managed\Unity.Postprocessing.Runtime.dll
 --assembly-folder=C:\Users\54117\Desktop\VR TP Final\Tp-parte-mil\Temp\StagingArea\Data\Managed\
 --pdb-search-paths=Temp/ManagedSymbols/
 --method=Unity.Jobs.IJobForExtensions+ForJobStruct`1[[UnityEngine.Rendering.Universal.ReorderJob`1[[UnityEngine.Rendering.Universal.LightMinMaxZ, Unity.RenderPipelines.Universal.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Unity.RenderPipelines.Universal.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::Execute(UnityEngine.Rendering.Universal.ReorderJob`1[[UnityEngine.Rendering.Universal.LightMinMaxZ, Unity.RenderPipelines.Universal.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]&, Unity.RenderPipelines.Universal.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|Unity.Jobs.LowLevel.Unsafe.JobRanges&, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--e943843acfb78f5f2f3716a6553740d9

@@ -357,55 +357,57 @@ extern void Error_ExtensionNodeMustOverrideProperty_mD5BBC9AEE0B7601E3814C967A52
 extern void LambdaExpression_get_Body_m161E156442547AE8A6837C5AE065BD93345451DE (void);
 // 0x00000114 System.Reflection.MemberInfo System.Linq.Expressions.MemberExpression::get_Member()
 extern void MemberExpression_get_Member_m30A7DCC7673A38BE9F06597DC9F5305E61B88104 (void);
-// 0x00000115 System.Reflection.MemberInfo System.Linq.Expressions.MemberExpression::GetMember()
+// 0x00000115 System.Linq.Expressions.Expression System.Linq.Expressions.MemberExpression::get_Expression()
+extern void MemberExpression_get_Expression_mF422466944A9875383573A4FD01CD661C64B7503 (void);
+// 0x00000116 System.Reflection.MemberInfo System.Linq.Expressions.MemberExpression::GetMember()
 extern void MemberExpression_GetMember_mB44F09D4104C91F27C0F3246C222224728A9C3FC (void);
-// 0x00000116 System.String System.Linq.Expressions.Strings::ExtensionNodeMustOverrideProperty(System.Object)
+// 0x00000117 System.String System.Linq.Expressions.Strings::ExtensionNodeMustOverrideProperty(System.Object)
 extern void Strings_ExtensionNodeMustOverrideProperty_m9104CAA7D2A9E08CBB135788A14930D2B9720284 (void);
-// 0x00000117 System.Linq.Expressions.Expression System.Linq.Expressions.UnaryExpression::get_Operand()
+// 0x00000118 System.Linq.Expressions.Expression System.Linq.Expressions.UnaryExpression::get_Operand()
 extern void UnaryExpression_get_Operand_mE144387E98BABF0D3FD8E4640612A726D91E2943 (void);
-// 0x00000118 System.Void System.Dynamic.Utils.CacheDict`2::.ctor(System.Int32)
-// 0x00000119 System.Int32 System.Dynamic.Utils.CacheDict`2::AlignSize(System.Int32)
-// 0x0000011A System.Exception System.Dynamic.Utils.ContractUtils::get_Unreachable()
+// 0x00000119 System.Void System.Dynamic.Utils.CacheDict`2::.ctor(System.Int32)
+// 0x0000011A System.Int32 System.Dynamic.Utils.CacheDict`2::AlignSize(System.Int32)
+// 0x0000011B System.Exception System.Dynamic.Utils.ContractUtils::get_Unreachable()
 extern void ContractUtils_get_Unreachable_m792F83C753CCE84550E4F0442CDC49B978FD0CE6 (void);
-// 0x0000011B System.Void System.Collections.Generic.HashSet`1::.ctor()
-// 0x0000011C System.Void System.Collections.Generic.HashSet`1::.ctor(System.Collections.Generic.IEqualityComparer`1<T>)
-// 0x0000011D System.Void System.Collections.Generic.HashSet`1::.ctor(System.Collections.Generic.IEnumerable`1<T>)
-// 0x0000011E System.Void System.Collections.Generic.HashSet`1::.ctor(System.Collections.Generic.IEnumerable`1<T>,System.Collections.Generic.IEqualityComparer`1<T>)
-// 0x0000011F System.Void System.Collections.Generic.HashSet`1::.ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
-// 0x00000120 System.Void System.Collections.Generic.HashSet`1::CopyFrom(System.Collections.Generic.HashSet`1<T>)
-// 0x00000121 System.Void System.Collections.Generic.HashSet`1::System.Collections.Generic.ICollection<T>.Add(T)
-// 0x00000122 System.Void System.Collections.Generic.HashSet`1::Clear()
-// 0x00000123 System.Boolean System.Collections.Generic.HashSet`1::Contains(T)
-// 0x00000124 System.Void System.Collections.Generic.HashSet`1::CopyTo(T[],System.Int32)
-// 0x00000125 System.Boolean System.Collections.Generic.HashSet`1::Remove(T)
-// 0x00000126 System.Int32 System.Collections.Generic.HashSet`1::get_Count()
-// 0x00000127 System.Boolean System.Collections.Generic.HashSet`1::System.Collections.Generic.ICollection<T>.get_IsReadOnly()
-// 0x00000128 System.Collections.Generic.HashSet`1/Enumerator<T> System.Collections.Generic.HashSet`1::GetEnumerator()
-// 0x00000129 System.Collections.Generic.IEnumerator`1<T> System.Collections.Generic.HashSet`1::System.Collections.Generic.IEnumerable<T>.GetEnumerator()
-// 0x0000012A System.Collections.IEnumerator System.Collections.Generic.HashSet`1::System.Collections.IEnumerable.GetEnumerator()
-// 0x0000012B System.Void System.Collections.Generic.HashSet`1::GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
-// 0x0000012C System.Void System.Collections.Generic.HashSet`1::OnDeserialization(System.Object)
-// 0x0000012D System.Boolean System.Collections.Generic.HashSet`1::Add(T)
-// 0x0000012E System.Void System.Collections.Generic.HashSet`1::UnionWith(System.Collections.Generic.IEnumerable`1<T>)
-// 0x0000012F System.Void System.Collections.Generic.HashSet`1::CopyTo(T[])
-// 0x00000130 System.Void System.Collections.Generic.HashSet`1::CopyTo(T[],System.Int32,System.Int32)
-// 0x00000131 System.Int32 System.Collections.Generic.HashSet`1::RemoveWhere(System.Predicate`1<T>)
-// 0x00000132 System.Collections.Generic.IEqualityComparer`1<T> System.Collections.Generic.HashSet`1::get_Comparer()
-// 0x00000133 System.Void System.Collections.Generic.HashSet`1::TrimExcess()
-// 0x00000134 System.Int32 System.Collections.Generic.HashSet`1::Initialize(System.Int32)
-// 0x00000135 System.Void System.Collections.Generic.HashSet`1::IncreaseCapacity()
-// 0x00000136 System.Void System.Collections.Generic.HashSet`1::SetCapacity(System.Int32)
-// 0x00000137 System.Boolean System.Collections.Generic.HashSet`1::AddIfNotPresent(T)
-// 0x00000138 System.Void System.Collections.Generic.HashSet`1::AddValue(System.Int32,System.Int32,T)
-// 0x00000139 System.Boolean System.Collections.Generic.HashSet`1::AreEqualityComparersEqual(System.Collections.Generic.HashSet`1<T>,System.Collections.Generic.HashSet`1<T>)
-// 0x0000013A System.Int32 System.Collections.Generic.HashSet`1::InternalGetHashCode(T)
-// 0x0000013B System.Void System.Collections.Generic.HashSet`1/Enumerator::.ctor(System.Collections.Generic.HashSet`1<T>)
-// 0x0000013C System.Void System.Collections.Generic.HashSet`1/Enumerator::Dispose()
-// 0x0000013D System.Boolean System.Collections.Generic.HashSet`1/Enumerator::MoveNext()
-// 0x0000013E T System.Collections.Generic.HashSet`1/Enumerator::get_Current()
-// 0x0000013F System.Object System.Collections.Generic.HashSet`1/Enumerator::System.Collections.IEnumerator.get_Current()
-// 0x00000140 System.Void System.Collections.Generic.HashSet`1/Enumerator::System.Collections.IEnumerator.Reset()
-static Il2CppMethodPointer s_methodPointers[320] = 
+// 0x0000011C System.Void System.Collections.Generic.HashSet`1::.ctor()
+// 0x0000011D System.Void System.Collections.Generic.HashSet`1::.ctor(System.Collections.Generic.IEqualityComparer`1<T>)
+// 0x0000011E System.Void System.Collections.Generic.HashSet`1::.ctor(System.Collections.Generic.IEnumerable`1<T>)
+// 0x0000011F System.Void System.Collections.Generic.HashSet`1::.ctor(System.Collections.Generic.IEnumerable`1<T>,System.Collections.Generic.IEqualityComparer`1<T>)
+// 0x00000120 System.Void System.Collections.Generic.HashSet`1::.ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+// 0x00000121 System.Void System.Collections.Generic.HashSet`1::CopyFrom(System.Collections.Generic.HashSet`1<T>)
+// 0x00000122 System.Void System.Collections.Generic.HashSet`1::System.Collections.Generic.ICollection<T>.Add(T)
+// 0x00000123 System.Void System.Collections.Generic.HashSet`1::Clear()
+// 0x00000124 System.Boolean System.Collections.Generic.HashSet`1::Contains(T)
+// 0x00000125 System.Void System.Collections.Generic.HashSet`1::CopyTo(T[],System.Int32)
+// 0x00000126 System.Boolean System.Collections.Generic.HashSet`1::Remove(T)
+// 0x00000127 System.Int32 System.Collections.Generic.HashSet`1::get_Count()
+// 0x00000128 System.Boolean System.Collections.Generic.HashSet`1::System.Collections.Generic.ICollection<T>.get_IsReadOnly()
+// 0x00000129 System.Collections.Generic.HashSet`1/Enumerator<T> System.Collections.Generic.HashSet`1::GetEnumerator()
+// 0x0000012A System.Collections.Generic.IEnumerator`1<T> System.Collections.Generic.HashSet`1::System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+// 0x0000012B System.Collections.IEnumerator System.Collections.Generic.HashSet`1::System.Collections.IEnumerable.GetEnumerator()
+// 0x0000012C System.Void System.Collections.Generic.HashSet`1::GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+// 0x0000012D System.Void System.Collections.Generic.HashSet`1::OnDeserialization(System.Object)
+// 0x0000012E System.Boolean System.Collections.Generic.HashSet`1::Add(T)
+// 0x0000012F System.Void System.Collections.Generic.HashSet`1::UnionWith(System.Collections.Generic.IEnumerable`1<T>)
+// 0x00000130 System.Void System.Collections.Generic.HashSet`1::CopyTo(T[])
+// 0x00000131 System.Void System.Collections.Generic.HashSet`1::CopyTo(T[],System.Int32,System.Int32)
+// 0x00000132 System.Int32 System.Collections.Generic.HashSet`1::RemoveWhere(System.Predicate`1<T>)
+// 0x00000133 System.Collections.Generic.IEqualityComparer`1<T> System.Collections.Generic.HashSet`1::get_Comparer()
+// 0x00000134 System.Void System.Collections.Generic.HashSet`1::TrimExcess()
+// 0x00000135 System.Int32 System.Collections.Generic.HashSet`1::Initialize(System.Int32)
+// 0x00000136 System.Void System.Collections.Generic.HashSet`1::IncreaseCapacity()
+// 0x00000137 System.Void System.Collections.Generic.HashSet`1::SetCapacity(System.Int32)
+// 0x00000138 System.Boolean System.Collections.Generic.HashSet`1::AddIfNotPresent(T)
+// 0x00000139 System.Void System.Collections.Generic.HashSet`1::AddValue(System.Int32,System.Int32,T)
+// 0x0000013A System.Boolean System.Collections.Generic.HashSet`1::AreEqualityComparersEqual(System.Collections.Generic.HashSet`1<T>,System.Collections.Generic.HashSet`1<T>)
+// 0x0000013B System.Int32 System.Collections.Generic.HashSet`1::InternalGetHashCode(T)
+// 0x0000013C System.Void System.Collections.Generic.HashSet`1/Enumerator::.ctor(System.Collections.Generic.HashSet`1<T>)
+// 0x0000013D System.Void System.Collections.Generic.HashSet`1/Enumerator::Dispose()
+// 0x0000013E System.Boolean System.Collections.Generic.HashSet`1/Enumerator::MoveNext()
+// 0x0000013F T System.Collections.Generic.HashSet`1/Enumerator::get_Current()
+// 0x00000140 System.Object System.Collections.Generic.HashSet`1/Enumerator::System.Collections.IEnumerator.get_Current()
+// 0x00000141 System.Void System.Collections.Generic.HashSet`1/Enumerator::System.Collections.IEnumerator.Reset()
+static Il2CppMethodPointer s_methodPointers[321] = 
 {
 	SR_GetString_m2213C501E26D6A1AE8D0644E9685AF8A4204CA7F,
 	SR_Format_m7198B645F5C0A5E33F30AEF003C1F1D1415A9F86,
@@ -683,6 +685,7 @@ static Il2CppMethodPointer s_methodPointers[320] =
 	Error_ExtensionNodeMustOverrideProperty_mD5BBC9AEE0B7601E3814C967A521A87A5713EB39,
 	LambdaExpression_get_Body_m161E156442547AE8A6837C5AE065BD93345451DE,
 	MemberExpression_get_Member_m30A7DCC7673A38BE9F06597DC9F5305E61B88104,
+	MemberExpression_get_Expression_mF422466944A9875383573A4FD01CD661C64B7503,
 	MemberExpression_GetMember_mB44F09D4104C91F27C0F3246C222224728A9C3FC,
 	Strings_ExtensionNodeMustOverrideProperty_m9104CAA7D2A9E08CBB135788A14930D2B9720284,
 	UnaryExpression_get_Operand_mE144387E98BABF0D3FD8E4640612A726D91E2943,
@@ -728,60 +731,60 @@ static Il2CppMethodPointer s_methodPointers[320] =
 	NULL,
 	NULL,
 };
-static const int32_t s_InvokerIndices[320] = 
+static const int32_t s_InvokerIndices[321] = 
 {
-	15132,
-	13365,
-	9559,
-	9363,
-	9406,
-	7574,
-	9406,
-	7574,
-	9363,
-	7530,
-	9363,
-	7530,
-	9363,
-	7530,
-	9406,
-	3324,
-	9406,
-	3324,
-	7440,
-	9559,
-	9559,
-	9559,
-	9559,
-	9559,
-	3324,
-	3324,
-	9406,
-	7574,
-	9406,
-	7574,
-	9363,
-	7530,
-	9363,
-	9363,
-	7530,
-	9363,
-	7530,
-	9406,
-	9406,
-	7440,
-	1536,
-	4282,
-	6984,
-	2267,
-	2267,
-	16397,
-	15132,
-	15132,
-	15132,
-	16342,
-	16342,
-	16342,
+	15205,
+	13433,
+	9600,
+	9404,
+	9447,
+	7613,
+	9447,
+	7613,
+	9404,
+	7569,
+	9404,
+	7569,
+	9404,
+	7569,
+	9447,
+	3358,
+	9447,
+	3358,
+	7479,
+	9600,
+	9600,
+	9600,
+	9600,
+	9600,
+	3358,
+	3358,
+	9447,
+	7613,
+	9447,
+	7613,
+	9404,
+	7569,
+	9404,
+	9404,
+	7569,
+	9404,
+	7569,
+	9447,
+	9447,
+	7479,
+	1558,
+	4316,
+	7023,
+	2296,
+	2296,
+	16472,
+	15205,
+	15205,
+	15205,
+	16417,
+	16417,
+	16417,
 	0,
 	0,
 	0,
@@ -813,8 +816,8 @@ static const int32_t s_InvokerIndices[320] =
 	0,
 	0,
 	0,
-	13340,
-	13340,
+	13408,
+	13408,
 	0,
 	0,
 	0,
@@ -823,8 +826,8 @@ static const int32_t s_InvokerIndices[320] =
 	0,
 	0,
 	0,
-	14979,
-	14979,
+	15049,
+	15049,
 	0,
 	0,
 	0,
@@ -919,14 +922,14 @@ static const int32_t s_InvokerIndices[320] =
 	0,
 	0,
 	0,
-	7530,
-	9559,
-	9277,
-	9363,
-	9559,
-	9406,
-	9406,
-	9406,
+	7569,
+	9600,
+	9318,
+	9404,
+	9600,
+	9447,
+	9447,
+	9447,
 	0,
 	0,
 	0,
@@ -1001,17 +1004,18 @@ static const int32_t s_InvokerIndices[320] =
 	0,
 	0,
 	0,
-	9363,
-	16397,
-	15132,
-	9406,
-	9406,
-	9406,
-	15132,
-	9406,
+	9404,
+	16472,
+	15205,
+	9447,
+	9447,
+	9447,
+	9447,
+	15205,
+	9447,
 	0,
 	0,
-	16342,
+	16417,
 	0,
 	0,
 	0,
@@ -2083,7 +2087,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_System_Core_CodeGenModule;
 const Il2CppCodeGenModule g_System_Core_CodeGenModule = 
 {
 	"System.Core.dll",
-	320,
+	321,
 	s_methodPointers,
 	0,
 	NULL,

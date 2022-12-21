@@ -22,21 +22,22 @@ public class GestureDetectorR1 : MonoBehaviour
     public VideoClip video3;
     public VideoClip video4;
     public VideoClip video5;
-    public GameObject tele;
+    public GameObject TVCanvas;
+    public GameObject TV;
     private VideoPlayer videosource;
-    private AudioSource ting;
-    public GameObject manos;
-    public Material checkmat;
-    private Material normalmat;
-    private bool v0 = false;
-    private bool v1 = false;
-    private bool v2 = false;
+    private AudioSource checkSound;
+    public GameObject hand;
+    public Material checkMat;
+    private Material origMat;
+    private bool v0 = true;
+    private bool v1 = true;
+    private bool v2 = true;
 
 
     IEnumerator Start(){
 
-        videosource = tele.GetComponent<VideoPlayer>();
-        ting = tele.GetComponent<AudioSource>();
+        videosource = TVCanvas.GetComponent<VideoPlayer>();
+        checkSound = TVCanvas.GetComponent<AudioSource>();
         
         
 
@@ -47,7 +48,7 @@ public class GestureDetectorR1 : MonoBehaviour
 
         fingerBones = new List<OVRBone>(skeleton.Bones);
         previousGesture = new Gesture();
-        normalmat = manos.GetComponent<SkinnedMeshRenderer>().material;
+        origMat = hand.GetComponent<SkinnedMeshRenderer>().material;
         
     }
 
@@ -61,45 +62,50 @@ public class GestureDetectorR1 : MonoBehaviour
         Gesture currentGesture = Recognize();
         bool hasRecognized = !currentGesture.Equals(new Gesture());
 
-        Debug.Log(videosource.isPlaying + "1");
-        Debug.Log(v0);
-        Debug.Log(v1);
-        if (!v0)
+        //Debug.Log(videosource.isPlaying + "1");
+        //Debug.Log(v0);
+        //Debug.Log(v1);
+        if (v0)
         {
+            TV.GetComponent<AudioSource>().Stop();
             videosource.clip = video0;
             videosource.isLooping = false;
             videosource.Play();
-            Debug.Log(videosource.isPlaying + "2");
-            v0 = true;
+            //Debug.Log(videosource.isPlaying + "2");
+            v0 = false;
+            
         }
-        else if (!videosource.isPlaying && v0 && !v1)
+        else if (!videosource.isPlaying && v1)
         {
-            Debug.Log("Segundo video");
+            //Debug.Log("Segundo video");
             videosource.clip = video1;
-            videosource.Play();
             videosource.isLooping = true;
-            v1 = true;
+            videosource.Play();
+            
+            v1 = false;
         }
-
+        /*
         if (hasRecognized && !currentGesture.Equals(previousGesture))
         {
             if (currentGesture.name == "thumb down" && v1 && !v2)
             {
-                ting.Play();
+                checkSound.Play();
                 videosource.clip = video2;
                 videosource.Play();
                 videosource.isLooping = true;
-                while (ting.isPlaying)
+                while (checkSound.isPlaying)
                 {
-                    manos.GetComponent<SkinnedMeshRenderer>().material = checkmat;
+                    hand.GetComponent<SkinnedMeshRenderer>().material = checkMat;
                 }
-                manos.GetComponent<SkinnedMeshRenderer>().material = normalmat;
-                v2 = true;
+                hand.GetComponent<SkinnedMeshRenderer>().material = origMat;
+                v2 = false;
             }
 
         }
+        */
 
     }
+
     void Save(){
         Gesture g = new Gesture();
         g.name = "New Gesture";
